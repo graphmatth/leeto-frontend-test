@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@base-ui-components/react": "^1.0.0-alpha.6",
     "@tailwindcss/vite": "^4.0.6",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",

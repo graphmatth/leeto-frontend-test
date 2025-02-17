@@ -11,4 +11,6 @@
 @theme {
 	--font-sans: InterVariable, sans-serif;
 	--color-brand-primary: #2E32BE;
+	--color-slate-600: #475569;
+	--color-slate-200: #CBD5E1;
 }
