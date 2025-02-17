@@ -9,6 +9,13 @@
 		"rules": { "recommended": false },
 		"ignore": ["dist"]
 	},
+	"css": {
+		"formatter": {
+			"enabled": true,
+			"indentWidth": 2,
+			"indentStyle": "tab"
+		}
+	},
 	"javascript": { "formatter": { "quoteStyle": "double" } },
 	"overrides": [
 		{
