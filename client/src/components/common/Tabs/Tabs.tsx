@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
-import { cn } from "../../../utils/cn";
+import { cn } from "@/utils/cn";
 import { Tabs as TabsHeadless } from "@base-ui-components/react/tabs";
 import { compoundComponent } from "../../../utils/compound-component";
 
@@ -37,7 +37,7 @@ const TabsTab = ({
 }: ComponentPropsWithoutRef<typeof TabsHeadless.Tab>) => (
 	<TabsHeadless.Tab
 		className={cn(
-			"font-semibold px-4 py-2 text-neutral-350 data-active:border-purple-500 text-slate-600 hover:text-brand-primary transition-colors duration-200 ease-in-out aria-selected:text-brand-primary cursor-pointer",
+			"font-semibold px-4 py-2 text-neutral-350 text-slate-600 hover:text-brand-primary transition-colors duration-200 ease-in-out aria-selected:text-brand-primary cursor-pointer",
 			className,
 		)}
 		{...props}
