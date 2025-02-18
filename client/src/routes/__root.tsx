@@ -5,7 +5,8 @@ import {
 	createRouter,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-
+import { StateSchema } from "@/modules/giftCards/employee/schemas/giftCardSchema";
+import z from "zod";
 import { GiftCardsPage } from "@/modules/giftCards/employee/pages/GiftCardsPage";
 
 export const rootRoute = createRootRoute({
@@ -19,18 +20,20 @@ export const rootRoute = createRootRoute({
 	),
 });
 
-
-interface SearchParams {
-	state?: "archived" | "active" | null;
-}
+type SearchParams = {
+	state: z.infer<typeof StateSchema>;
+};
 
 export const indexRoute = createRoute({
 	getParentRoute: () => rootRoute,
 	path: "/",
 	component: GiftCardsPage,
-	validateSearch: (search: Record<string, unknown>): SearchParams => ({
-		state: search.state as SearchParams["state"],
-	}),
+	validateSearch: (search: Record<string, unknown>): SearchParams => {
+		const stateValue = StateSchema.safeParse(search.state);
+		return {
+			state: stateValue.success ? stateValue.data : "active",
+		};
+	},
 });
 
 const routeTree = rootRoute.addChildren([indexRoute]);

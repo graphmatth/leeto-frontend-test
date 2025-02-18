@@ -1,5 +1,5 @@
 export type GiftCardType = {
-  id: number;
+  id: string;
   description: string;
   name: string;
   openingDate: string;

@@ -2,11 +2,14 @@ import { useGiftCards } from "@/modules/giftCards/employee/queries/getGiftCards"
 import { indexRoute } from "@/routes/__root";
 import { GiftCard } from "../components/GiftCard";
 import { GiftCardType } from "@/modules/giftCards/employee/types";
+import { StateSchema } from "../schemas/giftCardSchema";
 
 export const GiftCardsPage = () => {
-	const { state } = indexRoute.useSearch();
+	const { state: rawState } = indexRoute.useSearch();
+	const stateValue = StateSchema.safeParse(rawState);
+	const finalState = stateValue.success ? stateValue.data : "active";
 
-	const { data: giftCards, isLoading, error } = useGiftCards(state || "active");
+	const { data: giftCards, isLoading, error } = useGiftCards(finalState);
 
 	if (isLoading) return <p>Chargement...</p>;
 	if (error) return <p>Erreur : {error.message}</p>;
@@ -24,6 +27,5 @@ export const GiftCardsPage = () => {
 		</>
 	);
 };
-
 
 export default GiftCard;
