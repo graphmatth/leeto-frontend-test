@@ -11,7 +11,7 @@ import { GiftCardsPage } from "@/modules/giftCards/employee/pages/GiftCardsPage"
 export const rootRoute = createRootRoute({
 	component: () => (
 		<>
-			<main className="container mx-auto">
+			<main className="container p-4 md:p-10 mx-auto max-w-6xl">
 				<Outlet />
 			</main>
 			<TanStackRouterDevtools />

@@ -1,4 +1,4 @@
-export type GiftCard = {
+export type GiftCardType = {
   id: number;
   description: string;
   name: string;

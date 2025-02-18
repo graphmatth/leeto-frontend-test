@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 @font-face {
-	font-family: InterVariable;
-	font-style: normal;
-	font-weight: 100 900;
-	font-display: swap;
-	src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/InterVariable.woff2") format("woff2");
 }
 
 @theme {
-	--font-sans: InterVariable, sans-serif;
-	--color-brand-primary: #2E32BE;
-	--color-slate-600: #475569;
-	--color-slate-200: #CBD5E1;
+  --font-sans: InterVariable, sans-serif;
+  --color-brand-primary: #2e32be;
+  --color-slate-700: #1e293b;
+  --color-slate-600: #475569;
+  --color-slate-200: #cbd5e1;
+  --color-pink-800: #9d174d;
+  --color-pink-100: #fce7f3;
+  --color-green-100: #dcfce7;
+  --color-green-100: #dcfce7;
+  --color-green-800: #166534;
 }
