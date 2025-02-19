@@ -1,89 +1,85 @@
-# Leeto - Test technique développeur front-end
+# Leeto technical frontend test
 
-## Introduction
+## Tech Stack
 
-Dans l'application Leeto, nos utilisateurs peuvent consulter différentes cartes cadeaux mises à leur disposition par leur CSE.
+- React
+- TypeScript
+- TanStack Router
+- Tailwind CSS
+- Vitest & Testing Library
+- Storybook
+- Zod
+- Biome
 
-Ta mission consiste à créer une page web qui permettra de consulter ces cartes cadeaux ainsi qu'une page détail pour chacune d'entre elles.
+## Project Structure
 
-Le périmètre concerne uniquement la consultation et non la consommation de la carte cadeau.
-
-## Technos à utiliser
-
-- [React](https://react.dev)
-- [TypeScript](https://typescriptlang.org)
-- [Tailwind CSS](https://tailwindcss.com)
-- [TanStack Query](https://tanstack.com/query)
-
-## Spécifications
-
-- Une carte cadeau est composée des informations suivantes :
-  - un titre
-  - une description
-  - une date de création
-  - une date d'expiration
-  - un état de consommation (en euros)
-  - une liste de bénéficiaires (moi-même, mon/ma conjoint(e) et/ou mes enfants)
-- La page de listing doit pouvoir afficher les cartes cadeaux actives ou clôturées via un système d'onglets
-
-## Ressources
-
-### Maquettes
-
-https://www.figma.com/design/pHiuVYjR31D0tUkavDIsTs/front-end-case?node-id=1-277
-
-### API
-
-#### Démarrer le serveur
-
-1. Cloner ce repository
-2. Installer les dépendances : `yarn install`
-3. Démarrer le serveur : `yarn start`
-
-#### Endpoints
-
-- Liste des cartes cadeaux actives : `GET http://localhost:3001/gift-cards?state=active`
-- Liste des cartes cadeaux clôturées : `GET http://localhost:3001/gift-cards?state=archived`
-- Détail d'une carte cadeau : `GET http://localhost:3001/gift-cards/:id`
-
-#### Types
-
-```typescript
-type GiftCard = {
-  id: number;
-  description: string;
-  name: string;
-  openingDate: string;
-  closingDate: string;
-  state: "active" | "archived";
-  allowedAmount: number;
-  consumedAmount: number;
-  beneficiaries: {
-    id: number;
-    type: "user" | "companion" | "child";
-    firstName: string;
-    consumption: {
-      allowedAmount: number;
-      consumedAmount: number;
-    };
-  }[];
-};
+```
+/src
+ ├── components/      # Reusable UI components
+ ├── modules/         # Feature-based modules
+ ├── utils/           # Utility functions
+ ├── routes/          # App routing
+ ├── main.tsx         # Entry point
+ └── ...
 ```
 
-## Bonus
+### Setup & Installation
 
-- Bonus n°1 : Ajouter des tests unitaires
-- Bonus n°2 : Ajouter un [Storybook](https://storybook.js.org) pour présenter les composants
+1. Clone the repository:
 
-## Livrable
+```bash
+git clone git@github.com:graphmatth/leeto-frontend-test.git
+cd leeto-frontend-test
+```
 
-Le code devra être accessible sur un repository GitHub public.
+2. Install dependencies:
 
-## Ce qui sera évalué
+```bash
+yarn
+```
 
-- Le respect des maquettes
-- La qualité du code (lisibilité, maintenabilité et performance)
+3. Start the development server:
+   You might also need to run a `yarn` command inside the client folder before
 
-> 📒 Nos guidelines sont accessibles en ligne si tu souhaites t'en inspirer : https://leeto-front-end-guidelines.netlify.app
+```bash
+yarn start
+```
 
-> ✉️ Si tu as la moindre question, n'hésite pas à nous contacter.
+If you encounter issues running the project, make sure to install dependencies inside the client folder as well:
+
+```bash
+cd client && yarn
+```
+
+4. Run unit tests:
+
+```bash
+yarn test
+```
+
+5. StoryBook
+```bash
+yarn storybook
+```
+
+6. Hire me 😇😁
+
+## Planned evolution
+
+- Add more unit tests
+- Implement end-to-end and visual testing
+- Enhance the Storybook documentation
+- Improve icon management by using a dedicated, strongly typed Icon component instead of directly importing icons from the [react-icons](https://react-icons.github.io/react-icons/) package
+
+## Additional Notes
+
+**State of the card**
+Some cards have an `active` status but are actually `archived` due to an expired date. I chose not to apply an additional filter on the frontend because in my opinion this issue should be resolved before the data reaches the frontend.
+
+**id type**
+
+I’m not sure if this is intentional, but the id field in the [GiftCard](https://github.com/leclan/leeto-front-end-technical-test?tab=readme-ov-file#types) type is incorrectly typed. It is currently a string instead of a number.
+
+**Emoji**
+
+I decided to keep emojis in their native format rather than converting them into images. It’s important to keep in mind that emojis may appear differently depending on the OS. Additionally, if we want to use only Apple-style emojis, we may face copyright restrictions.
