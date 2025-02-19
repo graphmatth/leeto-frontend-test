@@ -74,6 +74,7 @@ yarn storybook
 ## Additional Notes
 
 **State of the card**
+
 Some cards have an `active` status but are actually `archived` due to an expired date. I chose not to apply an additional filter on the frontend because in my opinion this issue should be resolved before the data reaches the frontend.
 
 **id type**
