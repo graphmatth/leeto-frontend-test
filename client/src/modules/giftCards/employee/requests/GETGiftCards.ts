@@ -4,12 +4,13 @@ import {
   GiftCardsArraySchema,
 } from "@/modules/giftCards/employee/schemas/giftCardSchema";
 
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:3001/gift-cards";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
 export const GETGiftCards = async (state?: z.infer<typeof StateSchema>) => {
   try {
-    const response = await fetch(`${API_URL}${state ? `?state=${state}` : ``}`);
+    const response = await fetch(
+      `${API_URL}/gift-cards${state ? `?state=${state}` : ``}`
+    );
     if (!response.ok) {
       console.error(`HTTP error! status: ${response.status}`);
 

@@ -1,12 +1,11 @@
 import { z } from "zod";
 import { GiftCardSchema } from "@/modules/giftCards/employee/schemas/giftCardSchema";
 
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:3001/gift-cards";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
 export const GETGiftCardDetails = async (id: string) => {
   try {
-    const response = await fetch(`${API_URL}/${id}`);
+    const response = await fetch(`${API_URL}/gift-cards/${id}`);
     if (!response.ok) {
       console.error(`HTTP error! status: ${response.status}`);
 
