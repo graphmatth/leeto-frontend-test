@@ -27,8 +27,21 @@ export const GiftCardDetailsPage = () => {
 	return (
 		<>
 			<header className="mb-6">
-				<Button onClick={handleBack} variant="outlined" size="icon">
+				<Button
+					onClick={handleBack}
+					className="md:hidden"
+					variant="outlined"
+					size="icon"
+				>
 					<LuArrowLeft />
+				</Button>
+				<Button
+					onClick={handleBack}
+					className="hidden p-0 gap-1 font-medium md:inline-flex items-center text-brand-primary hover:underline"
+					variant="ghost"
+				>
+					<LuArrowLeft color="currentColor" />
+					Retour vers les cartes cadeaux
 				</Button>
 			</header>
 
