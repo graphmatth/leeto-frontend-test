@@ -1,7 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
-import { GiftCardType } from "../../types";
+import { GiftCardType } from "@/modules/giftCards/employee/types/gift-card";
 import { getTimeConsume } from "@/utils/get-time-consume";
 import { getTimeLeft } from "@/utils/get-time-left";
 import { isPast } from "date-fns";
@@ -79,7 +79,7 @@ export const GiftCardDetails = ({
 					<GiftCardDescription description={description} />
 				)}
 
-				<div className="md:grid grid-cols-1 md:grid-cols-2 gap-4" >
+				<div className="md:grid grid-cols-1 md:grid-cols-2 gap-4">
 					{beneficiariesList.length > 0 && (
 						<GiftCardBeneficiaries beneficiaries={beneficiaries} />
 					)}

@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { cn } from "@/utils/cn";
 import { Tabs as TabsHeadless } from "@base-ui-components/react/tabs";
-import { compoundComponent } from "../../../utils/compound-component";
+import { compoundComponent } from "@/utils/compound-component";
 
 const TabsRoot = ({
 	className,

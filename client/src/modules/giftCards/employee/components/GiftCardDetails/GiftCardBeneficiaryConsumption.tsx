@@ -1,16 +1,12 @@
-import { GiftCardType } from "../../types";
 import { formatPrice } from "@/utils/format-price";
 import { Progress } from "@/components/common/Progress/Progress";
-import { BENEFICIARY_ICONS } from "../../utils/beneficiary";
-
+import { BENEFICIARY_ICONS } from "@/modules/giftCards/employee/utils/beneficiary";
 import { IconBox } from "@/modules/giftCards/common/components/IconBox/IconBox";
-type GiftCardBeneficiaryConsumptionProps = {
-	beneficiaries: GiftCardType["beneficiaries"];
-};
+import { GiftCardBeneficiariesProps } from "@/modules/giftCards/employee/types/gift-card";
 
 export const GiftCardBeneficiaryConsumption = ({
 	beneficiaries,
-}: GiftCardBeneficiaryConsumptionProps) => {
+}: GiftCardBeneficiariesProps) => {
 	return (
 		<div className="flex flex-col gap-2 p-4 border border-slate-200 rounded-[8px]">
 			<IconBox icon="line-chart" color="green" className="size-10" />
@@ -35,7 +31,8 @@ export const GiftCardBeneficiaryConsumption = ({
 								<span className="text-sm text-slate-600">
 									{beneficiarie.type === "user"
 										? "Vous-même"
-										: beneficiarie.firstName}{" · "}
+										: beneficiarie.firstName}
+									{" · "}
 									{formatPrice(consumedAmount)}&nbsp;€ /{" "}
 									{formatPrice(allowedAmount)}&nbsp;€
 								</span>

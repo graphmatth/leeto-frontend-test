@@ -1,14 +1,8 @@
 import React from "react";
-import { formatBeneficiariesList } from "../../utils/beneficiary";
-import { GiftCardType } from "../../types";
+import { formatBeneficiariesList } from "@/modules/giftCards/employee/utils/beneficiary";
+import { GiftCardBeneficiariesProps } from "@/modules/giftCards/employee/types/gift-card";
 import { BeneficiaryAvatar } from "./BeneficiaryAvatar";
 import { IconBox } from "@/modules/giftCards/common/components/IconBox/IconBox";
-
-type BeneficiariesType = GiftCardType["beneficiaries"];
-
-type GiftCardBeneficiariesProps = {
-	beneficiaries: BeneficiariesType;
-};
 
 export const GiftCardBeneficiaries = ({
 	beneficiaries,

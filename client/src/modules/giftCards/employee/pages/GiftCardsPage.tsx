@@ -1,9 +1,9 @@
 import React from "react";
 import { useGiftCards } from "@/modules/giftCards/employee/queries/getGiftCards";
 import { indexRoute } from "@/routes/__root";
-import { GiftCard } from "../components/GiftCard";
-import { GiftCardType } from "@/modules/giftCards/employee/types";
-import { StateSchema } from "../schemas/giftCardSchema";
+import { GiftCard } from "@/modules/giftCards/employee/components/GiftCard";
+import { GiftCardType } from "@/modules/giftCards/employee/types/gift-card";
+import { StateSchema } from "@/modules/giftCards/employee//schemas/giftCardSchema";
 import { Tabs } from "@/components/common/Tabs/Tabs";
 import { Link } from "@tanstack/react-router";
 

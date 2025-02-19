@@ -1,11 +1,6 @@
 import { MdCalendarToday } from "react-icons/md";
 import { IoMdTime } from "react-icons/io";
-
-type GiftCardHeaderProps = {
-	openingDate: string;
-	closingDate: string;
-	timeLeft?: string;
-};
+import { GiftCardHeaderProps } from "@/modules/giftCards/employee/types/gift-card";
 
 export const GiftCardHeader = ({
 	openingDate,

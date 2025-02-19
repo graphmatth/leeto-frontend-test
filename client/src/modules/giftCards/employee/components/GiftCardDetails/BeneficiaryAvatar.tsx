@@ -1,8 +1,5 @@
-import { BeneficiaryType, getBeneficiaryAvatar } from "../../utils/beneficiary";
-type BeneficiaryAvatarProps = {
-	type: BeneficiaryType;
-	index: number;
-};
+import { getBeneficiaryAvatar } from "@/modules/giftCards/employee/utils/beneficiary";
+import { BeneficiaryAvatarProps } from "@/modules/giftCards/employee/types/gift-card";
 
 export const BeneficiaryAvatar = ({ type, index }: BeneficiaryAvatarProps) => (
 	<span

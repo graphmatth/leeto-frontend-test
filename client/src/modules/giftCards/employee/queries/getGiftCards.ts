@@ -1,6 +1,6 @@
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import { GETGiftCards } from "../requests/GETGiftCards";
-import { GiftCardType } from "../types";
+import { GETGiftCards } from "@/modules/giftCards/employee/requests/GETGiftCards";
+import { GiftCardType } from "@/modules/giftCards/employee/types/gift-card";
 
 import { StateSchema } from "@/modules/giftCards/employee/schemas/giftCardSchema";
 import { z } from "zod";

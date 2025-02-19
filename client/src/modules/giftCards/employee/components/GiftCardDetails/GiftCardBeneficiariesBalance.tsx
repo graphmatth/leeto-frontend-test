@@ -1,15 +1,6 @@
-import { GiftCardType } from "../../types";
+import { GiftCardBalanceProps } from "@/modules/giftCards/employee/types/gift-card";
 import { formatPrice } from "@/utils/format-price";
 import { Progress } from "@/components/common/Progress/Progress";
-
-type AllowedAmountType = GiftCardType["allowedAmount"];
-type ConsumedAmountType = GiftCardType["consumedAmount"];
-
-type GiftCardBalanceProps = {
-	allowedAmount: AllowedAmountType;
-	consumedAmount: ConsumedAmountType;
-	percentageUsed: number;
-};
 
 export const GiftCardBalance = ({
 	allowedAmount,
@@ -20,7 +11,6 @@ export const GiftCardBalance = ({
 
 	return (
 		<div className="flex gap-4 items-end md:order-last md:max-w-[480px]">
-
 			<p className="text-slate-700">
 				<span className="font-semibold text-xl md:text-2xl">
 					{formatPrice(availableAmount)} €

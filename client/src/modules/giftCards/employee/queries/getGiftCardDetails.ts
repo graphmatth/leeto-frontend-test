@@ -1,6 +1,6 @@
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import { GETGiftCardDetails } from "../requests/GETGiftCardDetails";
-import { GiftCardType } from "@/modules/giftCards/employee/types";
+import { GETGiftCardDetails } from "@/modules/giftCards/employee/requests/GETGiftCardDetails";
+import { GiftCardType } from "@/modules/giftCards/employee/types/gift-card";
 
 export const useGiftCardDetails = (
   id: string

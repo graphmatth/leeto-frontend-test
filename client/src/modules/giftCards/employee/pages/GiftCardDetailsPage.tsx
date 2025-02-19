@@ -1,6 +1,6 @@
 import { useParams } from "@tanstack/react-router";
-import { useGiftCardDetails } from "../queries/getGiftCardDetails";
-import { GiftCardDetails } from "../components/GiftCardDetails/GiftCardDetails";
+import { useGiftCardDetails } from "@/modules/giftCards/employee/queries/getGiftCardDetails";
+import { GiftCardDetails } from "@/modules/giftCards/employee/components/GiftCardDetails/GiftCardDetails";
 import { useNavigate } from "@tanstack/react-router";
 import { Button } from "@/components/common/Button/Button";
 import { LuArrowLeft } from "react-icons/lu";

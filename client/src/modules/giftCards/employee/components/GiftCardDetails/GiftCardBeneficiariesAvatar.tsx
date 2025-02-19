@@ -1,15 +1,4 @@
-import { GiftCardType } from "../../types";
-
-type IconMapProps = {
-	user: "🙋‍♂️";
-	companion: "💙";
-	child: "👶";
-};
-
-type GiftCardBeneficiariesAvatarProps = {
-	beneficiaries: GiftCardType["beneficiaries"];
-	iconMap: IconMapProps;
-};
+import { GiftCardBeneficiariesAvatarProps } from "@/modules/giftCards/employee/types/gift-card";
 
 export const GiftCardBeneficiariesAvatar = ({
 	beneficiaries,

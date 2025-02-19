@@ -1,5 +1,5 @@
 import React from "react";
-import { GiftCardType } from "@/modules/giftCards/employee/types";
+import { GiftCardType } from "@/modules/giftCards/employee/types/gift-card";
 import { Progress } from "@/components/common/Progress/Progress";
 import { isPast } from "date-fns";
 import { getTimeLeft } from "@/utils/get-time-left";
