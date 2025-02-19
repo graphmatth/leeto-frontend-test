@@ -1,9 +1,9 @@
-import { renderWithRouter } from "../utils/test-utils";
-import { GiftCard } from "./GiftCard";
+import { renderWithRouter } from "@/utils/test-utils";
+import { GiftCard } from "../../GiftCard";
 import { screen } from "@testing-library/react";
 import { describe, test, expect } from "vitest";
 import "@testing-library/jest-dom";
-import { GiftCardType } from "../types/gift-card";
+import { GiftCardType } from "../../../types/gift-card";
 
 describe("GiftCard Component", () => {
 	const mockProps: GiftCardType = {
