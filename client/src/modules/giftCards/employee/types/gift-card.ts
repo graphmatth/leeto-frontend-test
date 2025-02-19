@@ -37,7 +37,8 @@ export type GiftCardBeneficiaryConsumptionProps = {
 /* Component Types */
 export type BeneficiaryAvatarProps = {
   type: BeneficiaryType;
-  index: number;
+  index?: number;
+  label?: string;
 };
 
 export type GiftCardHeaderProps = {

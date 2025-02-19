@@ -1,8 +1,8 @@
 import { formatPrice } from "@/utils/format-price";
 import { Progress } from "@/components/common/Progress/Progress";
-import { BENEFICIARY_ICONS } from "@/modules/giftCards/employee/utils/beneficiary";
 import { IconBox } from "@/modules/giftCards/common/components/IconBox/IconBox";
 import { GiftCardBeneficiariesProps } from "@/modules/giftCards/employee/types/gift-card";
+import { BeneficiaryAvatar } from "@/modules/giftCards/employee/components/GiftCardDetails/BeneficiaryAvatar";
 
 export const GiftCardBeneficiaryConsumption = ({
 	beneficiaries,
@@ -25,9 +25,8 @@ export const GiftCardBeneficiaryConsumption = ({
 							className={`flex flex-col ${idx === 0 ? "col-span-2" : ""} gap-1 text-slate-700`}
 						>
 							<p className="flex items-center gap-2">
-								<span className="text-lg">
-									{BENEFICIARY_ICONS[beneficiarie.type]}
-								</span>
+								<BeneficiaryAvatar label={beneficiarie.type} type={beneficiarie.type} />
+
 								<span className="text-sm text-slate-600">
 									{beneficiarie.type === "user"
 										? "Vous-même"
