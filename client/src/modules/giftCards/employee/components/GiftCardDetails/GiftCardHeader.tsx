@@ -13,7 +13,7 @@ export const GiftCardHeader = ({
 	timeLeft,
 }: GiftCardHeaderProps) => {
 	return (
-		<div className="flex flex-col gap-2">
+		<div className="flex flex-col gap-2 md:flex-row">
 			<p className="flex items-center text-slate-600 text-sm gap-1">
 				<MdCalendarToday className="size-4" />
 				{openingDate} - {closingDate}

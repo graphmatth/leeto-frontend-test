@@ -19,13 +19,14 @@ export const GiftCardBalance = ({
 	const availableAmount = allowedAmount - consumedAmount;
 
 	return (
-		<div className="flex gap-4 items-end">
+		<div className="flex gap-4 items-end md:order-last md:max-w-[480px]">
+
 			<p className="text-slate-700">
-				<span className="font-semibold text-xl">
+				<span className="font-semibold text-xl md:text-2xl">
 					{formatPrice(availableAmount)} €
 				</span>
 				<br />
-				<span className="text-xs font-medium">disponible</span>
+				<span className="text-xs font-medium md:text-sm">disponible</span>
 			</p>
 			<div className="flex flex-col flex-1 gap-1">
 				<p className="text-xs text-slate-600">

@@ -2,6 +2,7 @@ import React from "react";
 import { formatBeneficiariesList } from "../../utils/beneficiary";
 import { GiftCardType } from "../../types";
 import { BeneficiaryAvatar } from "./BeneficiaryAvatar";
+import { IconBox } from "@/modules/giftCards/common/components/IconBox/IconBox";
 
 type BeneficiariesType = GiftCardType["beneficiaries"];
 
@@ -20,7 +21,8 @@ export const GiftCardBeneficiaries = ({
 	if (!beneficiariesList) return null;
 
 	return (
-		<div className="flex flex-col gap-2 p-4 border border-slate-200 rounded-[8px]">
+		<div className="flex flex-col gap-2 p-4 border border-slate-200 rounded-[8px] mb-4 md:mb-0">
+			<IconBox icon="family" color="green" className="size-10" />
 			<p className="text-slate-900 font-medium">
 				Quel(s) ayant(s)-droit validés bénéficient de cette cagnotte ?
 			</p>

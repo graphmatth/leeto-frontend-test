@@ -57,8 +57,10 @@ export const GiftCardDetails = ({
 	return (
 		<>
 			<div className="mb-4">
-				<IconBox color="pink" icon="gift" className="size-10" />
-				<h2 className="text-slate-700 font-s font-medium text-xl">{name}</h2>
+				<IconBox color="pink" icon="gift" size="large" />
+				<h2 className="text-slate-700 font-s font-medium text-xl md:text-2xl">
+					{name}
+				</h2>
 			</div>
 			<div className="flex flex-col gap-4">
 				<GiftCardHeader
@@ -77,11 +79,13 @@ export const GiftCardDetails = ({
 					<GiftCardDescription description={description} />
 				)}
 
-				{beneficiariesList.length > 0 && (
-					<GiftCardBeneficiaries beneficiaries={beneficiaries} />
-				)}
+				<div className="md:grid grid-cols-1 md:grid-cols-2 gap-4" >
+					{beneficiariesList.length > 0 && (
+						<GiftCardBeneficiaries beneficiaries={beneficiaries} />
+					)}
 
-				<GiftCardBeneficiaryConsumption beneficiaries={beneficiaries} />
+					<GiftCardBeneficiaryConsumption beneficiaries={beneficiaries} />
+				</div>
 			</div>
 		</>
 	);
