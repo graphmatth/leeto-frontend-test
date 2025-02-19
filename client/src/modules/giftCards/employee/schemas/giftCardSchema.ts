@@ -14,7 +14,7 @@ const BeneficiarySchema = z.object({
   consumption: ConsumptionSchema,
 });
 
-const GiftCardSchema = z.object({
+export const GiftCardSchema = z.object({
   id: z.string(),
   description: z.string(),
   name: z.string(),

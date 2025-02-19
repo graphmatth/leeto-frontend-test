@@ -42,7 +42,7 @@ export const IconBox: React.FC<IconBoxProps> = ({
   
   return (
     <div className={cn(iconBoxVariants({ color }), className)}>
-      <Icon className="size-4" />
+      <Icon className="size-[18px]" />
     </div>
   )
 }

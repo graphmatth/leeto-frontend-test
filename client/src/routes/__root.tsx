@@ -8,6 +8,7 @@ import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { StateSchema } from "@/modules/giftCards/employee/schemas/giftCardSchema";
 import z from "zod";
 import { GiftCardsPage } from "@/modules/giftCards/employee/pages/GiftCardsPage";
+import { GiftCardDetailsPage } from "@/modules/giftCards/employee/pages/GiftCardDetailsPage";
 
 export const rootRoute = createRootRoute({
 	component: () => (
@@ -36,7 +37,13 @@ export const indexRoute = createRoute({
 	},
 });
 
-const routeTree = rootRoute.addChildren([indexRoute]);
+export const giftCardDetailsRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/$giftCardId",
+	component: GiftCardDetailsPage,
+});
+
+const routeTree = rootRoute.addChildren([indexRoute, giftCardDetailsRoute]);
 
 export const router = createRouter({ routeTree });
 

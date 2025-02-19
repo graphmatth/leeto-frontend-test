@@ -1,8 +1,4 @@
-import {
-  useQuery,
-  UseQueryResult,
-  useQueryClient,
-} from "@tanstack/react-query";
+import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import { GETGiftCards } from "../requests/GETGiftCards";
 import { GiftCardType } from "../types";
 
