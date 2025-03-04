@@ -1,5 +1,7 @@
 # Leeto technical frontend test
 
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/62e33473-3449-4921-ac9a-529154f67d3d" />
+
 This repository is a technical test implementation following the specifications provided in [leclan/leeto-front-end-technical-test](https://github.com/leclan/leeto-front-end-technical-test).
 
 ## Tech Stack
