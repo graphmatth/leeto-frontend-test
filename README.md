@@ -1,5 +1,7 @@
 # Leeto technical frontend test
 
+This repository is a technical test implementation following the specifications provided in [leclan/leeto-front-end-technical-test](https://github.com/leclan/leeto-front-end-technical-test).
+
 ## Tech Stack
 
 - React
